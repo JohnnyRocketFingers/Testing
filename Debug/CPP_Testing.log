@@ -1,15 +1,35 @@
-﻿Build started 2/16/2016 12:14:29 AM.
-     1>Project "C:\Users\David\Documents\GitHub\Testing\CPP_Testing.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2/17/2016 1:14:46 AM.
+     1>Project "C:\Users\David\Documents\GitHub\Testing\CPP_Testing.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Entity.cpp GManager.cpp Item.cpp Level.cpp main.cpp Player.cpp Utility.cpp
+         Utility.cpp
+     1>c:\users\david\documents\github\testing\utility.cpp(4): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         Player.cpp
+     1>c:\users\david\documents\github\testing\level.h(18): error C2061: syntax error : identifier 'Player'
          main.cpp
-     1>c:\users\david\documents\github\testing\main.cpp(136): warning C4101: 'y' : unreferenced local variable
-     1>c:\users\david\documents\github\testing\main.cpp(136): warning C4101: 'x' : unreferenced local variable
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\David\Documents\GitHub\Testing\Debug\CPP_Testing.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\David\Documents\GitHub\Testing\Debug\CPP_Testing.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\David\Documents\GitHub\Testing\Debug\CPP_Testing.lib" /MACHINE:X86 Debug\main.obj
-         CPP_Testing.vcxproj -> C:\Users\David\Documents\GitHub\Testing\Debug\CPP_Testing.exe
-     1>Done Building Project "C:\Users\David\Documents\GitHub\Testing\CPP_Testing.vcxproj" (Build target(s)).
+     1>c:\users\david\documents\github\testing\player.h(10): error C2504: 'Entity' : base class undefined
+     1>c:\users\david\documents\github\testing\player.h(13): error C2061: syntax error : identifier 'Level'
+     1>c:\users\david\documents\github\testing\main.cpp(30): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+         Level.cpp
+     1>c:\users\david\documents\github\testing\entity.h(27): error C2061: syntax error : identifier 'Level'
+     1>c:\users\david\documents\github\testing\player.h(13): error C2061: syntax error : identifier 'Level'
+     1>c:\users\david\documents\github\testing\level.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\david\documents\github\testing\level.cpp(26): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\david\documents\github\testing\level.cpp(52): warning C4018: '<' : signed/unsigned mismatch
+         Item.cpp
+         GManager.cpp
+     1>c:\users\david\documents\github\testing\player.h(10): error C2504: 'Entity' : base class undefined
+     1>c:\users\david\documents\github\testing\player.h(13): error C2061: syntax error : identifier 'Level'
+     1>c:\users\david\documents\github\testing\gmanager.cpp(31): error C2660: 'Player::Move' : function does not take 1 arguments
+     1>c:\users\david\documents\github\testing\gmanager.cpp(32): error C2039: 'Draw' : is not a member of 'Player'
+                 c:\users\david\documents\github\testing\player.h(9) : see declaration of 'Player'
+         Entity.cpp
+     1>c:\users\david\documents\github\testing\player.h(10): error C2504: 'Entity' : base class undefined
+     1>c:\users\david\documents\github\testing\player.h(13): error C2061: syntax error : identifier 'Level'
+     1>c:\users\david\documents\github\testing\entity.cpp(30): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+         Generating Code...
+     1>Done Building Project "C:\Users\David\Documents\GitHub\Testing\CPP_Testing.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.61
+Time Elapsed 00:00:01.90
