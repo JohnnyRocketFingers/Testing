@@ -10,7 +10,7 @@ class Player : public Entity
 {
 public:
 	Player(string name, int hp, int mp, int def, int atk, int wis, int dex, int vit, int spd, int gold, int exp);
-	void Move(Level &lvl);
+	void Move();
 	bool canMove(int x, int y, char tile);
 	~Player();
 };

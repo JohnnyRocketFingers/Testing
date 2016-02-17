@@ -71,10 +71,11 @@ void Entity::Attack(Entity* atke){
 
 
 }
-
+/*
 void Entity::Draw(Level &lvl){
 	lvl.setChar(_x, _y, _symbol);
 }
+*/
 
 void Entity::printStats(){
 	cout << "*" << _name << "*" << endl;

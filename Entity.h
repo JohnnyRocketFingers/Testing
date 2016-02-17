@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include "Utility.h"
-#include "Level.h"
 
 using namespace std;
 
@@ -24,7 +23,7 @@ public:
 	void getPosition(int &x, int &y);
 	char getSymbol();
 	void Attack(Entity* atke);
-	void Draw(Level &lvl);
+	//void Draw(Level &lvl);
 	void printStats();
 
 

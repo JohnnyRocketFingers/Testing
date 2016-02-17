@@ -1,35 +1,29 @@
-﻿Build started 2/17/2016 1:14:46 AM.
-     1>Project "C:\Users\David\Documents\GitHub\Testing\CPP_Testing.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 2/17/2016 1:26:57 AM.
+     1>Project "C:\Users\David\Documents\GitHub\Testing\CPP_Testing.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Entity.cpp GManager.cpp Item.cpp Level.cpp main.cpp Player.cpp Utility.cpp
-         Utility.cpp
-     1>c:\users\david\documents\github\testing\utility.cpp(4): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         Player.cpp
-     1>c:\users\david\documents\github\testing\level.h(18): error C2061: syntax error : identifier 'Player'
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Entity.cpp GManager.cpp Level.cpp Player.cpp main.cpp
          main.cpp
-     1>c:\users\david\documents\github\testing\player.h(10): error C2504: 'Entity' : base class undefined
      1>c:\users\david\documents\github\testing\player.h(13): error C2061: syntax error : identifier 'Level'
      1>c:\users\david\documents\github\testing\main.cpp(30): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+         Player.cpp
+     1>c:\users\david\documents\github\testing\level.h(18): error C2061: syntax error : identifier 'Player'
          Level.cpp
-     1>c:\users\david\documents\github\testing\entity.h(27): error C2061: syntax error : identifier 'Level'
      1>c:\users\david\documents\github\testing\player.h(13): error C2061: syntax error : identifier 'Level'
      1>c:\users\david\documents\github\testing\level.cpp(25): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\david\documents\github\testing\level.cpp(26): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\david\documents\github\testing\level.cpp(52): warning C4018: '<' : signed/unsigned mismatch
-         Item.cpp
          GManager.cpp
-     1>c:\users\david\documents\github\testing\player.h(10): error C2504: 'Entity' : base class undefined
      1>c:\users\david\documents\github\testing\player.h(13): error C2061: syntax error : identifier 'Level'
+     1>c:\users\david\documents\github\testing\gmanager.cpp(28): error C2039: 'Draw' : is not a member of 'Entity'
+                 c:\users\david\documents\github\testing\entity.h(8) : see declaration of 'Entity'
      1>c:\users\david\documents\github\testing\gmanager.cpp(31): error C2660: 'Player::Move' : function does not take 1 arguments
      1>c:\users\david\documents\github\testing\gmanager.cpp(32): error C2039: 'Draw' : is not a member of 'Player'
                  c:\users\david\documents\github\testing\player.h(9) : see declaration of 'Player'
          Entity.cpp
-     1>c:\users\david\documents\github\testing\player.h(10): error C2504: 'Entity' : base class undefined
-     1>c:\users\david\documents\github\testing\player.h(13): error C2061: syntax error : identifier 'Level'
      1>c:\users\david\documents\github\testing\entity.cpp(30): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
          Generating Code...
-     1>Done Building Project "C:\Users\David\Documents\GitHub\Testing\CPP_Testing.vcxproj" (Rebuild target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\David\Documents\GitHub\Testing\CPP_Testing.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.90
+Time Elapsed 00:00:01.35

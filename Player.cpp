@@ -19,7 +19,7 @@ Player::Player(string name, int hp, int mp, int def, int atk, int wis, int dex, 
 
 }
 
-void Player::Move(Level &lvl){
+void Player::Move(){
 	char input;
 	char tile;
 
