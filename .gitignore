@@ -28,5 +28,5 @@
 *.app
 
 # Temp VS files
-.sdf
-.opensdf
+*.sdf
+*.opensdf
