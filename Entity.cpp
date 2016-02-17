@@ -67,15 +67,26 @@ char Entity::getSymbol(){
 	return _symbol;
 }
 
+void Entity::setSymbol(char symb){
+	_symbol = symb;
+}
+
 void Entity::Attack(Entity* atke){
 
 
 }
-/*
-void Entity::Draw(Level &lvl){
-	lvl.setChar(_x, _y, _symbol);
+
+
+void Entity::getTryMovePos(int &x, int &y){
+	x = _tx;
+	y = _ty;
 }
-*/
+
+void Entity::setTryMovePos(int x, int y){
+	_tx = x;
+	_ty = y;
+}
+
 
 void Entity::printStats(){
 	cout << "*" << _name << "*" << endl;

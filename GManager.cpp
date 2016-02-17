@@ -3,7 +3,7 @@
 
 GManager::GManager(){
 	cout << "GManager created" << endl;
-	player = new Player("Dave",100,10,10,25,5,10,5,10,0,0);
+	player = new Player("Dave",'@',100,10,10,25,5,10,5,10,0,0);
 	lvl.Load("Level1.txt",player);
 	
 }
@@ -19,17 +19,19 @@ Entity* GManager::Pop(){
 }
 
 void GManager::Update(){
-	//draw level
-	lvl.Draw();
 	//update/draw mobs
 	for (int i = 0; i < pos; i++)
 	{
-		mobs[i]->Update();
-		mobs[i]->Draw(lvl);//todo: have entities draw them selves , maybe have level draw entities so lvl.draw(mobs[i]) instead 
+		mobs[i]->Update();//do ent stuff
+		lvl.MoveE(mobs[i]);//move ent
+		lvl.DrawE(mobs[i]);//draw ent
 	}
 	//process move and draw player
-	player->Move(lvl);
-	player->Draw(lvl);
+	lvl.Draw();
+	player->Update();
+	player->Move();
+	lvl.MoveE(player);
+	lvl.DrawE(player);
 	
 }
 

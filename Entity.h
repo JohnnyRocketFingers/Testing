@@ -11,6 +11,7 @@ protected:
 	string _name;
 	char _symbol;
 	int _x, _y;
+	int _tx, _ty;
 	struct _stats{ int hp, mp, def, atk, wis, dex, vit, spd, gold, exp; }_stats;
 public:
 	Entity();
@@ -22,10 +23,10 @@ public:
 	void setPosition(int x, int y);
 	void getPosition(int &x, int &y);
 	char getSymbol();
+	void setSymbol(char symb);
+	void getTryMovePos(int &x, int &y);
+	void setTryMovePos(int x, int y);
 	void Attack(Entity* atke);
-	//void Draw(Level &lvl);
 	void printStats();
-
-
 
 };

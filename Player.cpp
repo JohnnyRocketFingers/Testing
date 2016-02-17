@@ -1,9 +1,10 @@
 #include "Player.h"
 
 
-Player::Player(string name, int hp, int mp, int def, int atk, int wis, int dex, int vit, int spd, int gold, int exp)
+Player::Player(string name,char symbol, int hp, int mp, int def, int atk, int wis, int dex, int vit, int spd, int gold, int exp)
 {
 	_name = name;
+	_symbol = symbol;
 	_stats.hp = hp;
 	_stats.mp = mp;
 	_stats.def = def;
@@ -21,56 +22,49 @@ Player::Player(string name, int hp, int mp, int def, int atk, int wis, int dex, 
 
 void Player::Move(){
 	char input;
-	char tile;
+	int x, y;
+	bool moreInput;
 
-	input = getch();
+	getPosition(x, y);
+	
+	do{
+		input = _getch();
+		moreInput = false;
 
-	switch (input){
-	case 'w'://up
-	case 'W':
-		tile = lvl.getChar(_x, _y - 1);
-		if (canMove(_x, _y - 1, tile)) {_y -= 1;}
+		switch (input){
+		case 'w'://up
+		case 'W':
+			setTryMovePos(x, y - 1);
+			break;
 
-		break;
-	case 's'://down
-	case 'S':
-		tile = lvl.getChar(_x,_y + 1);
-		if (canMove(_x, _y + 1, tile)) { _y += 1; }
-		break;
+		case 's'://down
+		case 'S':
+			setTryMovePos(x, y + 1);
+			break;
 
-	case 'a'://left
-	case 'A':
-		tile = lvl.getChar(_x - 1, _y);
-		if (canMove(_x - 1, _y, tile)) { _x -= 1; }
-		break;
+		case 'a'://left
+		case 'A':
+			setTryMovePos(x - 1, y);
+			break;
 
-	case 'd'://right
-	case 'D':
-		tile = lvl.getChar(_x + 1, _y);
-		if (canMove(_x + 1, _y, tile)) { _x += 1; }
-		break;
-	case 'x':
-	case 'X':
-		printf("Waiting...\n");
-		break;
-	default:
-		tile = lvl.getChar(_x, _y);
-		printf("Invalid input %s!\n", input);
-	}
+		case 'd'://right
+		case 'D':
+			setTryMovePos(x + 1, y);
+			break;
+
+		case 'x':
+		case 'X':
+			setTryMovePos(x, y);
+			printf("Waiting...\n");
+			break;
+
+		default:
+			printf("Invalid input %c!\n", input);
+			moreInput = true;
+		}
+	} while (moreInput);
 }
 
-bool Player::canMove(int x, int y, char tile){//if not air then cant move
-	switch (tile){
-	case '#':
-		return false;
-	case '.':
-		return true;
-	case '@':
-		return false;
-	default:
-		return false;
-	}
-}
 
 Player::~Player()
 {

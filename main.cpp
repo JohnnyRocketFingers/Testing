@@ -20,11 +20,7 @@ int main()
 	
 	
 	while (running){
-		
-		input = _getch();
-		cout << clear;
 		gm.Update();
-		printf("Entered: %c\n",input);
 	}
 
 	gm.Push(new Entity("Jared", 100, 0, 5, 10, 0, 20, 5, 10, 5, 5.0));
