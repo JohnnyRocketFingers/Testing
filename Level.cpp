@@ -19,30 +19,10 @@ void Level::Load(string filename, Player *player){
 	}
 
 	file.close();
-	
-	//process tiles
-	char tile;
-	for (int y = 0; y < _levelData.size(); y++){
-		for (int x = 0; x < _levelData[y].size(); x++){
-			tile = getChar(x,y);
 
-			switch (tile){
-			case '@':
-				player->setPosition(x, y);
-				setChar(x,y,'.');
-				break;
-			case 'G':
-				//todo: generate enityt and push onto list for updates and stuff.
-				break;
-			case '#':
-				break;
-			case '.' :
-				break;
-			default:
-				printf("Unrecognized Symbol %s", tile);
-			}
-		}
-	}
+	sizeY = _levelData.size();
+	sizeX = _levelData[0].size();
+	
 }
 
 void Level::MoveE(Entity* ent){
@@ -72,6 +52,11 @@ char Level::getChar(int x, int y){
 
 void Level::setChar(int x, int y, char c){
 	_levelData[y][x] = c;
+}
+
+void Level::getSize(int &x, int &y){
+	x = sizeX;
+	y = sizeY;
 }
 
 void Level::Draw(){

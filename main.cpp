@@ -5,6 +5,7 @@
 #include "GManager.h"//includes Entity
 #include "Level.h"
 #include "Utility.h"
+#include "EntityManager.h"
 
 using namespace std;
 
@@ -17,20 +18,11 @@ int main()
 	seedRand();
 
 	GManager gm;
-	
+	EntityManager em;
 	
 	while (running){
 		gm.Update();
 	}
-
-	gm.Push(new Entity("Jared", 100, 0, 5, 10, 0, 20, 5, 10, 5, 5.0));
-	gm.Push(new Entity("Lars",0));
-	gm.Push(new Entity("Lars2", 1));
-	gm.Push(new Entity("Lars3", 2));
-	gm.Push(new Entity("Lars4", 3));
-	
-
-	gm.Update();
 
 
 	char c;

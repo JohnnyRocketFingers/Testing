@@ -65,6 +65,9 @@ void Player::Move(){
 	} while (moreInput);
 }
 
+void Player::Update(){
+
+}
 
 Player::~Player()
 {

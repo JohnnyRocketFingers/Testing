@@ -9,9 +9,13 @@ Entity::Entity()
 	cout << "Entity " << _name << " created!" << endl;
 }
 
-Entity::Entity(string name, int str){
+Entity::Entity(string name, char sym, int str, int idin, int x, int y){
 
 	_name = name;
+	id = idin;
+	_symbol = sym;
+	_x = x;
+	_y = y;
 
 	switch (str){
 	case 0:
@@ -49,8 +53,25 @@ Entity::Entity(string name, int hp, int mp, int def, int atk, int wis, int dex, 
 
 }
 
-void Entity::Update(){
+void Entity::Update(Entity *player){
 	//printStats();
+	int px, py; 
+	player->getPosition(px,py);
+	if (_x < px){
+		setTryMovePos(_x + 1 , _y);
+	}
+	else if (_x > px){
+		setTryMovePos(_x - 1, _y);
+	}
+	else{
+
+		if (_y < py){
+			setTryMovePos(_x, _y + 1);
+		}
+		else if (_y > px){
+			setTryMovePos(_x, _y - 1);
+		}
+	}
 }
 
 void Entity::setPosition(int x, int y){
@@ -78,8 +99,14 @@ void Entity::Attack(Entity* atke){
 
 
 void Entity::getTryMovePos(int &x, int &y){
-	x = _tx;
-	y = _ty;
+	if (_tx < 0 && _ty < 0){
+		x = _x;
+		y = _y;
+	}
+	else{
+		x = _tx;
+		y = _ty;
+	}
 }
 
 void Entity::setTryMovePos(int x, int y){

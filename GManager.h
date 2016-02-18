@@ -4,24 +4,21 @@
 #include "Entity.h"
 #include "Level.h"
 #include "Player.h"
+#include "EntityManager.h"
 
 using namespace std;
 
 class GManager{
 private:
 protected:
-	Entity* mobs[100];
 	Level lvl;
 	Player* player;
-	int pos = 0;
+	EntityManager em;
 public:
 
 	GManager::GManager();
 	GManager::~GManager();
 
-
-	void GManager::Push(Entity* enemy);
-	Entity* GManager::Pop();
 	void GManager::Update();
 
 
