@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-#include <cstdlib> //idk
-#include <conio.h> //getch
+//#include <conio.h> //getch
 #include "GManager.h"//includes Entity
 #include "Level.h"
 #include "Utility.h"
@@ -13,7 +12,7 @@ using namespace std;
 int main()
 {
 	char input;
-	string clear(50,'\n');
+
 	bool running = true;
 	seedRand();
 

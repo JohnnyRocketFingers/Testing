@@ -2,6 +2,7 @@
 
 Level::Level()
 {
+	clear = string(100, '\n');
 }
 
 void Level::Load(string filename, Player *player){
@@ -60,7 +61,7 @@ void Level::getSize(int &x, int &y){
 }
 
 void Level::Draw(){
-	
+	cout << clear;
 	for (int i = 0; i < _levelData.size(); i++){
 		printf("%s\n", _levelData[i].c_str());
 	}

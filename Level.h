@@ -15,6 +15,8 @@ private:
 protected:
 	int sizeX, sizeY; //assume level is evenly square
 public:
+	string clear;
+
 	Level();
 	void Load(string filename, Player *player);
 	void MoveE(Entity* ent);
