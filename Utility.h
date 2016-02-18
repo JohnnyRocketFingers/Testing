@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void seedRand();
-int random(int min, int max);
+extern void seedRand();
+extern int random(int min = 0, int max = 100);
 
 
