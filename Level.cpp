@@ -26,27 +26,6 @@ void Level::Load(string filename, Player *player){
 	
 }
 
-void Level::MoveE(Entity* ent){
-	int tx, ty;
-	int x, y;
-	ent->getPosition(x, y);	//get ent current position
-	ent->getTryMovePos(tx, ty);	//get the position its trying to move to
-	char tile = getChar(tx,ty);	//get char at that position
-
-	switch (tile){
-	case '.':					//if char is air set thier position to that new position
-		setChar(x, y, tile);
-		ent->setPosition(tx, ty);
-		break;
-	}
-}
-
-void Level::DrawE(Entity* ent){
-	int x, y;
-	ent->getPosition(x, y); //get position of the current entity
-	setChar(x, y, ent->getSymbol()); //draw the ent at that position
-}
-
 char Level::getChar(int x, int y){
 	return _levelData[y][x];
 }

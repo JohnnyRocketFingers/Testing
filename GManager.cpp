@@ -11,10 +11,7 @@ GManager::GManager(){
 
 
 void GManager::Update(){
-	//update/draw mobs
-		em.Update(lvl);
-	//process move and draw player
-
+	em.Update(lvl);
 	lvl.MoveE(player);
 	lvl.DrawE(player);
 	lvl.Draw();
