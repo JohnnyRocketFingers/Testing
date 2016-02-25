@@ -81,8 +81,7 @@ void EntityManager::Update(Level &lvl){
 		if (mobs[i] != NULL){
 			mobs[i]->Update(player,lvl);//do ent stuff
 			//TODO: fix these below
-			lvl.MoveE(mobs[i]);//move ent
-			lvl.DrawE(mobs[i]);//draw ent
+			mobs[i].Move(lvl);//move ent
 		}
 	}
 }

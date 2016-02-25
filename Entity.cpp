@@ -98,7 +98,6 @@ void Entity::Attack(Entity* atke){
 
 }
 
-
 void Entity::getTryMovePos(int &x, int &y){
 	if (_tx < 0 && _ty < 0){
 		x = _x;
@@ -116,11 +115,11 @@ void Entity::setTryMovePos(int x, int y){
 }
 
 //TODO: fix these functions and add them to entity.h
-void Level::MoveE(Entity* ent){
+void Entity::Move(Level & lvl){
 	int tx, ty;
 	int x, y;
-	ent->getPosition(x, y);	//get ent current position
-	ent->getTryMovePos(tx, ty);	//get the position its trying to move to
+	getPosition(x, y);	//get ent current position
+	getTryMovePos(tx, ty);	//get the position its trying to move to
 	char tile = getChar(tx, ty);	//get char at that position
 
 	switch (tile){
@@ -131,9 +130,9 @@ void Level::MoveE(Entity* ent){
 	}
 }
 
-void Level::DrawE(Entity* ent){
+void Entity::Draw(Level & lvl){
 	int x, y;
-	ent->getPosition(x, y); //get position of the current entity
+	getPosition(x, y); //get position of the current entity
 	setChar(x, y, ent->getSymbol()); //draw the ent at that position
 }
 

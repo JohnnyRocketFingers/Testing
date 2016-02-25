@@ -30,6 +30,8 @@ public:
 	void getTryMovePos(int &x, int &y);
 	void setTryMovePos(int x, int y);
 	void Attack(Entity* atke);
+	void Move();
+	void Draw();
 	void printStats();
 
 };

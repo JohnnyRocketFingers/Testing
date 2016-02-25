@@ -39,7 +39,17 @@ void Level::getSize(int &x, int &y){
 	y = sizeY;
 }
 
+void Level::Update(){
+
+}
+
 void Level::Draw(){
+	for (){
+		for (){
+
+		}
+	}
+
 	cout << clear;
 	for (int i = 0; i < _levelData.size(); i++){
 		printf("%s\n", _levelData[i].c_str());

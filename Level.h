@@ -17,7 +17,7 @@ public:
 	string clear;
 
 	Level();
-	void Load(string filename, Player *player);
+	void Load(string filename){
 	char getChar(int x, int y);
 	void setChar(int x, int y, char c);
 	void getSize(int &x, int &y);
